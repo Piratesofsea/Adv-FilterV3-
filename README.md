@@ -54,7 +54,7 @@ You can deploy this bot anywhere.
 <summary>Deploy To Heroku</summary>
 <br>
 <p>
-<a href="https://heroku.com/deploy?template=https://github.com/DrPirate/adv-filter">
+<a href="https://heroku.com/deploy?template=https://github.com/DrPirate/adv-FilterBot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>

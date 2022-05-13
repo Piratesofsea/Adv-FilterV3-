@@ -10,7 +10,7 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 # -- Constants -- #
 ALIVE = "ചത്തിട്ടില്ല മുത്തേ ഇവിടെ തന്നെ ഉണ്ട്..😇  എങ്കിലും ചുമ്മാ ഒന്ന് /help ചെയ്തു നോക്ക്..🙂" 
 REPO = "Sorry VadiValu Not a open source bot"
-CHANNEL = "⚙️"
+CHANNEL = "<b>𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b> ›› https://youtube.com/channel/UCmCxXwmizdO6iDtb1a7U0gw\n\n<b>𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/FilmPiratesOfficial</b>\n\n<b>𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/AdBotUpdate</b>"
 PIRATES = ""
 # -- Constants End -- #
 
@@ -28,7 +28,6 @@ async def ping(_, message):
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"Pong!\n{time_taken_s:.3f} ms")
 
-
 @Client.on_message(filters.command("repo", COMMAND_HAND_LER) & f_onw_fliter)
 async def repo(_, message):
     await message.reply_text(REPO)
@@ -37,6 +36,11 @@ async def repo(_, message):
 @Client.on_message(filters.command("group", COMMAND_HAND_LER) & f_onw_fliter)
 async def group(_, message):
     await message.reply_text(GROUP)
+
+
+@Client.on_message(filters.command("channel", COMMAND_HAND_LER) & f_onw_fliter)
+async def channel(_, message):
+    await message.reply_text(CHANNEL)
 
 
 

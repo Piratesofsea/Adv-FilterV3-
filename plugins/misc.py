@@ -60,14 +60,15 @@ async def showid(client, message):
 @Client.on_message(filters.command("about"))
 async def aboutme(client, message):
         buttons= [[
-            InlineKeyboardButton('⚙️INFO', callback_data='cor')
+            InlineKeyboardButton('♥️ 𝙳𝙴𝙿𝙻𝙾𝚈 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 ♥️', url='https://youtu.be/kB9TkCs8cX0')
             ],[
-            InlineKeyboardButton('« Back ', callback_data='start'),
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(
-            text=script.ABOUT_TXT.format(message.from_user.mention),
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.ABOUT_TXT.format(message.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -148,11 +149,46 @@ async def who_is(client, message):
 @Client.on_message(filters.command("help"))
 async def help(client, message):
         buttons = [[
-            InlineKeyboardButton('🛠️'Tools, callback_data='help')
+            InlineKeyboardButton('𝙼𝙰𝙽𝚄𝙴𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='manuelfilter'),
+            InlineKeyboardButton('𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='autofilter'),
+            InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽𝚂', callback_data='coct')
+            ],[
+            InlineKeyboardButton('𝚂𝙾𝙽𝙶', callback_data='songs'),
+            InlineKeyboardButton('𝙴𝚇𝚃𝚁𝙰', callback_data='extra'),
+            InlineKeyboardButton("𝚅𝙸𝙳𝙴𝙾", callback_data='video')
+            ],[
+            InlineKeyboardButton('𝙿𝙸𝙽', callback_data='pin'), 
+            InlineKeyboardButton('𝙿𝙰𝚂𝚃𝙴', callback_data='pastes'),
+            InlineKeyboardButton("𝙸𝙼𝙰𝙶𝙴", callback_data='image')
+            ],[
+            InlineKeyboardButton('𝙵𝚄𝙽', callback_data='fun'), 
+            InlineKeyboardButton('𝙹𝚂𝙾𝙽𝙴', callback_data='son'),
+            InlineKeyboardButton('𝚃𝚃𝚂', callback_data='ttss')
+            ],[
+            InlineKeyboardButton('𝙿𝚄𝚁𝙶𝙴', callback_data='purges'),
+            InlineKeyboardButton('𝙿𝙸𝙽𝙶', callback_data='pings'),
+            InlineKeyboardButton('𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='tele')
+            ],[
+            InlineKeyboardButton('𝚆𝙷𝙾𝙸𝚂', callback_data='whois'),
+            InlineKeyboardButton('𝙼𝚄𝚃𝙴', callback_data='restric'),
+            InlineKeyboardButton('𝙺𝙸𝙲𝙺', callback_data='zombies')
+            ],[
+            InlineKeyboardButton('𝚁𝙴𝙿𝙾𝚁𝚃', callback_data='report'),
+            InlineKeyboardButton('𝚈𝚃-𝚃𝙷𝚄𝙼𝙱', callback_data='ytthumb'),
+            InlineKeyboardButton('𝚂𝚃𝙸𝙲𝙺𝙴𝚁-𝙸𝙳', callback_data='sticker')
+            ],[
+            InlineKeyboardButton('𝙲𝙾𝚅𝙸𝙳', callback_data='corona'),
+            InlineKeyboardButton('𝙰𝚄𝙳𝙸𝙾-𝙱𝙾𝙾𝙺', callback_data='abook'),
+            InlineKeyboardButton('𝚄𝚁𝙻-𝚂𝙷𝙾𝚁𝚃', callback_data='urlshort')
+            ],[
+            InlineKeyboardButton('𝙶-𝚃𝚁𝙰𝙽𝚂', callback_data='gtrans'),
+            InlineKeyboardButton('𝙵𝙸𝙻𝙴-𝚂𝚃𝙾𝚁𝙴', callback_data='newdata'),
+            InlineKeyboardButton('𝚂𝚃𝙰𝚃𝚄𝚂', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(
-            text=script.HELP_TXT.format(message.from_user.mention),
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.HELP_TXT.format(message.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -240,5 +276,6 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
     else:
         await quer_y.message.edit(caption, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=False)
     await quer_y.answer()
+
 
 

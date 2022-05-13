@@ -9,7 +9,7 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 
 # -- Constants -- #
 ALIVE = "ചത്തിട്ടില്ല മുത്തേ ഇവിടെ തന്നെ ഉണ്ട്..😇  എങ്കിലും ചുമ്മാ ഒന്ന് /help ചെയ്തു നോക്ക്..🙂" 
-REPO = "Sorry VadiValu Not a open source bot"
+REPO = "https://github.com/Piratesofsea/Adv-FilterV3-"
 CHANNEL = "<b>𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b> ›› https://youtube.com/channel/UCmCxXwmizdO6iDtb1a7U0gw\n\n<b>𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/FilmPiratesOfficial</b>\n\n<b>𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/AdBotUpdate</b>"
 PIRATES = ""
 # -- Constants End -- #

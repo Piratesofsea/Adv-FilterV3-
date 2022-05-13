@@ -17,7 +17,7 @@
       "inline"
     ],
     "website": "https://github.com/Mpirates/allinone",
-    "repository": "https://github.com/Mpirates/allinone",
+    "repository": "https://github.com/DrPirate/adv-FilterBot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
